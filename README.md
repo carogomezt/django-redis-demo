@@ -30,6 +30,7 @@
    python manage.py run server
    ```
 _Note: If you have Redis installed locally you could skip the next step._
+
 10. Stop the running app and run the docker image, we are using here a docker image of Redis to avoid additional installations:
    ```
    docker-compose up
