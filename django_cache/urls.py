@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from store.views import products_view
+from store.views import products_view, products_cached_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('products', products_view)
+    path('products', products_view),
+    path('cached_products', products_cached_view)
+
 ]
