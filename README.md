@@ -94,6 +94,12 @@ Why is this possible?, Because the first time you hit the cache endpoint the app
 from the database but subsequent calls to the same URL will bypass the database and query from the cache because the data is
 already available.
 
+If you want to see the keys in Redis you could open the Redis CLI and check it:
+```
+redis-cli
+127.0.0.1:6379> KEYS *
+```
+
 ### Additional resources 
 - [Effortless API Request Caching with Python & Redis](https://rednafi.github.io/digressions/python/database/2020/05/25/python-redis-cache.html)
 - [Django caching using Redis](https://tamerlan.dev/django-caching-using-redis/)
