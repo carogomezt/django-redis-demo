@@ -94,10 +94,17 @@ Why is this possible?, Because the first time you hit the cache endpoint the app
 from the database but subsequent calls to the same URL will bypass the database and query from the cache because the data is
 already available.
 
-If you want to see the keys in Redis you could open the Redis CLI and check it:
+If you want to see how everything is stored in Redis you can use the Redis CLI, open up a terminal in your Redis container and run:
 ```
 redis-cli
+```
+To see the keys you could run:
+```
 127.0.0.1:6379> KEYS *
+```
+And to see how values are stored in Redis you could run this command:
+```
+127.0.0.1:6379> GET :1:product
 ```
 
 ### Additional resources 
